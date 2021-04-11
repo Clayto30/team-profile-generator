@@ -16,5 +16,5 @@ test("gets manager's office number", () => {
 })
 
 test("gets manager role", () => {
-expect(getRole()).toEqual(expect.stringContaining('Manager'));
+expect(getRole()).toBe('Manager');
 })
