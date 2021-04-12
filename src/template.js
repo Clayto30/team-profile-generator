@@ -4,8 +4,9 @@
 const cardsHTML = [];
 
 function generateCardHTML(employee) {
-    switch (employee) {
-        case employee.getRole() = "Manager":
+    console.log("we called the function!");
+    if (employee.getRole() == "Manager") {
+            console.log("it worked")
             return `
 <div class="col mb-4">
 <div class="card" style="width: 18rem;">
@@ -16,12 +17,13 @@ function generateCardHTML(employee) {
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${employee.getId()}</li>
                             <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail}</li>
-                            <li class="list-group-item">Office number: ${manager.officeNumber}</li>
+                            <li class="list-group-item">Office number: ${employee.officeNumber}</li>
                         </ul>
                     </div>
                 </div>
 `;
-        case employee.getRole() = "Engineer":
+    } else if (employee.getRole() == "Engineer") {
+            console.log("it worked engineer")
             return `
     <div class="col mb-4">
     <div class="card" style="width: 18rem;">
@@ -32,12 +34,14 @@ function generateCardHTML(employee) {
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${employee.getId()}</li>
                             <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</li>
-                            <li class="list-group-item"><a href="https://github.com/${engineeer.getGithub}" target="_blank">${engineeer.getGithub}</a></li>
+                            <li class="list-group-item"><a href="https://github.com/${employee.getGithub}" target="_blank">${employee.getGithub}</a></li>
                         </ul>
                     </div>
                 </div>
     `;
-        case employee.getRole() = "Intern":
+    } else if 
+        (employee.getRole() == "Intern") {
+            console.log("it worked intern")
             return `
     <div class="col mb-4">
     <div class="card" style="width: 18rem;">
@@ -48,16 +52,19 @@ function generateCardHTML(employee) {
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${employee.getId()}</li>
                             <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</li>
-                            <li class="list-group-item">${intern.getSchool}</li>
+                            <li class="list-group-item">${employee.getSchool}</li>
                         </ul>
                     </div>
                 </div>
     `;
+    } else {
+        console.log("It didn't work");
     }
+
 }
 
 const generateHTML = () => {
-return`
+    return `
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,3 +92,5 @@ return`
 </html>
 `;
 };
+
+module.exports = { generateCardHTML, generateHTML, cardsHTML };
