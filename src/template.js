@@ -14,7 +14,7 @@ function generateCardHTML(employee) {
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${employee.getId()}</li>
-                            <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail}</li>
+                            <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
                             <li class="list-group-item">Office number: ${employee.officeNumber}</li>
                         </ul>
                     </div>
@@ -30,8 +30,8 @@ function generateCardHTML(employee) {
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${employee.getId()}</li>
-                            <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</li>
-                            <li class="list-group-item"><a href="https://github.com/${employee.getGithub()}" target="_blank">${employee.getGithub()}</a></li>
+                            <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
+                            <li class="list-group-item">Github: <a href="https://github.com/${employee.getGithub()}" target="_blank">${employee.getGithub()}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -47,8 +47,8 @@ function generateCardHTML(employee) {
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${employee.getId()}</li>
-                            <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</li>
-                            <li class="list-group-item">${employee.getSchool}</li>
+                            <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
+                            <li class="list-group-item">School: ${employee.getSchool()}</li>
                         </ul>
                     </div>
                 </div>
