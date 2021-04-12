@@ -142,18 +142,25 @@ const createManager = () => {
         .then(answers => {
             const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
             employeesArray.push(manager);
-            // console.log(employeesArray)
             promptNewEmployee();
         });
 
 };
 
 const buildTeam = () => {
-    console.log(employeesArray);
     for (let i = 0; i < employeesArray.length; i++) {
         let employee = employeesArray[i]
         generateCardHTML(employee);
         cardsHTML.push(generateCardHTML(employee));
+        const writeFile = () => {
+                fs.writeFile('./dist/index.html', generateHTML(), err => {
+                    if (err) {
+                        reject(err);
+                        return;
+                    }
+                });
+        };
+        writeFile();
     }
 }
 // initial call 

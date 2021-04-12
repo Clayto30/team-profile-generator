@@ -31,7 +31,7 @@ function generateCardHTML(employee) {
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${employee.getId()}</li>
                             <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</li>
-                            <li class="list-group-item"><a href="https://github.com/${employee.getGithub}" target="_blank">${employee.getGithub}</a></li>
+                            <li class="list-group-item"><a href="https://github.com/${employee.getGithub()}" target="_blank">${employee.getGithub()}</a></li>
                         </ul>
                     </div>
                 </div>
