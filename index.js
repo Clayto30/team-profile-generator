@@ -3,6 +3,8 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 const employeesArray = [];
+const fs = require('fs');
+const generateHTML = require('./src/template');
 // creates an employee type that is an intern
 const createIntern = () => {
     inquirer
@@ -37,6 +39,7 @@ const createIntern = () => {
             }])
         .then(answers => {
             const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
+            employeesArray.push(intern);
             promptNewEmployee();
         })
 }
@@ -74,6 +77,7 @@ const createEngineer = () => {
             }])
         .then(answers => {
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
+            employeesArray.push(engineer);
             promptNewEmployee();
         });
 }
@@ -96,8 +100,7 @@ const promptNewEmployee = () => {
             } else if (answers.employeeType == "intern") {
                 createIntern();
             } else {
-                console.log("no more questions");
-                return;
+                buildTeam();
             };
         })
 };
@@ -138,8 +141,8 @@ const createManager = () => {
         ])
         .then(answers => {
             const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
-            // push manager to employeeArray here?
-            // do this same thing 
+            employeesArray.push(manager);
+            // console.log(employeesArray)
             promptNewEmployee();
         });
 
@@ -149,6 +152,6 @@ createManager();
 
 const buildTeam = () => {
     for (let i = 0; i < employeesArray.length; i++) {
-        // let employee = employeesArray[i]
+        let employee = employeesArray[i]
     }
 }
