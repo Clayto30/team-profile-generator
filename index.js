@@ -4,7 +4,7 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 const employeesArray = [];
 const fs = require('fs');
-const generateHTML = require('./src/template');
+const { generateCardHTML, generateHTML } = require('./src/template');
 // creates an employee type that is an intern
 const createIntern = () => {
     inquirer
@@ -151,7 +151,11 @@ const createManager = () => {
 createManager();
 
 const buildTeam = () => {
+    
     for (let i = 0; i < employeesArray.length; i++) {
-        let employee = employeesArray[i]
+        generateCardHTML();
+        console.log(generateCardHTML);
+        cardHTML.push(generateCardHTML);
     }
+    console.log(cardHTML);
 }

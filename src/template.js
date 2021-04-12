@@ -1,9 +1,10 @@
 // get a card from bootstrap use same card over and over and make it
 // manager.getName
 // manager.getId
+const cardsHTML = [];
 
-function generateCardHTML(answers) {
-    switch (answers) {
+function generateCardHTML(employee) {
+    switch (employee) {
         case employee.getRole() = "Manager":
             return `
 <div class="col mb-4">
@@ -76,7 +77,7 @@ return`
     </header>
     <div class="container text-success">
             <div class="row row-cols-1 row-cols-md-3">
-            ${generateCardHTML(answers)}                
+            ${cardsHTML}                
             </div>
     </div>
 </body>
