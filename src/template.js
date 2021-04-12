@@ -4,9 +4,7 @@
 const cardsHTML = [];
 
 function generateCardHTML(employee) {
-    console.log("we called the function!");
     if (employee.getRole() == "Manager") {
-            console.log("it worked")
             return `
 <div class="col mb-4">
 <div class="card" style="width: 18rem;">
@@ -23,7 +21,6 @@ function generateCardHTML(employee) {
                 </div>
 `;
     } else if (employee.getRole() == "Engineer") {
-            console.log("it worked engineer")
             return `
     <div class="col mb-4">
     <div class="card" style="width: 18rem;">
@@ -41,7 +38,6 @@ function generateCardHTML(employee) {
     `;
     } else if 
         (employee.getRole() == "Intern") {
-            console.log("it worked intern")
             return `
     <div class="col mb-4">
     <div class="card" style="width: 18rem;">
@@ -57,10 +53,7 @@ function generateCardHTML(employee) {
                     </div>
                 </div>
     `;
-    } else {
-        console.log("It didn't work");
     }
-
 }
 
 const generateHTML = () => {

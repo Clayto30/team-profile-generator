@@ -150,13 +150,11 @@ const createManager = () => {
 
 const buildTeam = () => {
     console.log(employeesArray);
-for (let i = 0; i < employeesArray.length; i++) {
-    let employee = employeesArray[i]
-    console.log(employee);
-    generateCardHTML(employee);
-    // cardsHTML.push(generateCardHTML());
-    // console.log(cardsHTML);
-}
+    for (let i = 0; i < employeesArray.length; i++) {
+        let employee = employeesArray[i]
+        generateCardHTML(employee);
+        cardsHTML.push(generateCardHTML(employee));
+    }
 }
 // initial call 
 createManager();
