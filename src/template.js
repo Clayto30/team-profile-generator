@@ -4,7 +4,7 @@
 
 function generateHTML(answers) {
     switch (answers) {
-        case "Manager":
+        case employee.getRole() = "Manager":
             return `
 <div class="col mb-4">
 <div class="card" style="width: 18rem;">
@@ -20,7 +20,7 @@ function generateHTML(answers) {
                     </div>
                 </div>
 `;
-        case "Engineer":
+        case employee.getRole() = "Engineer":
             return `
     <div class="col mb-4">
     <div class="card" style="width: 18rem;">
@@ -36,7 +36,7 @@ function generateHTML(answers) {
                     </div>
                 </div>
     `;
-        case "Intern":
+        case employee.getRole() = "Intern":
             return `
     <div class="col mb-4">
     <div class="card" style="width: 18rem;">
